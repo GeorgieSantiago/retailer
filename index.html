@@ -10,9 +10,10 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
+    <!--
     <meta http-equiv="Content-Security-Policy"
-          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-
+          content="default-src '*' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+    -->
     <!-- Required meta tags-->
     <meta charset="utf-8">
     <meta name="viewport"
@@ -31,10 +32,11 @@
 
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
-    <!--Move this to native soon TODO-->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="css/styles.css">
+    <!--Change this to local TODO-->
+    <script src="https://use.fontawesome.com/5d2c4b978c.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -88,21 +90,17 @@
         <!-- Bottom Toolbar-->
         <div class="toolbar">
             <div class="toolbar-inner">
-                <!-- Toolbar links -->
-                    <div class="icon-cell">
-                        <i class="f7-icons size-50">home</i>
-                        <span class="icon-name">home</span>
-                    </div>
-                <a href="inventory.html" class="link" data-page="inventory"><i class="icon icon-book"></i></a>
-                <a href="pay.html" class="link" data-page="pay"><i class="icon icon-money_dollar_fill"></i></a>
-                <a href="commission.html" class="link" data-page="commission"><i class="icon icon-graph_square"></i></a>
-                <a href="about.html" class="link"><i class="icon icon-info"></i></a>
+                <a href="index.html"><i class="fa fa-home"></i></a>
+                <a href="inventory.html" class="link" data-page="inventory"><i class="fa fa-address-book"></i></a>
+                <a href="pay.html" class="link" data-page="pay"><i class="fa fa-dollar"></i></a>
+                <a href="commission.html" class="link" data-page="commission"><i class="fa fa-bar-chart"></i></a>
             </div>
         </div>
     </div>
 </div>
 
 <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="cordova_plugins.js"></script>
 <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
 <script type="text/javascript" src="js/core.js"></script>
 </body>
